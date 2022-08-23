@@ -1,0 +1,53 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; 
+    width: 200px;
+    border: 1px solid gray;
+    margin: 15px ;
+}
+
+/*BOTON*/
+
+
+  
+
+  
+  div:hover {
+    background: rgb(37, 150, 190);
+  }
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:active {
+    
+    background: rgb(15, 140, 185);
+    color: white;
+  }
