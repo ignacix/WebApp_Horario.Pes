@@ -23,6 +23,7 @@ img{
 }
 
 div{
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,6 +44,8 @@ div{
   }
 
   a{
+    padding: 10% 40%;
+    
     text-decoration: none;
     color: black;
   }
