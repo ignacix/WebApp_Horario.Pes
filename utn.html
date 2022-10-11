@@ -5,21 +5,112 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horarios.Pes</title>
-    <!-- CSS only -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
     <header>
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjIAAABZCAMAAAATvj7bAAABBVBMVEX///8AneAAmt8AmN8Am9/s6+sAl9///v////3L4erQ4urq6urm6etlu+kAnd8AoOFKruX4/f7Y7/t3w+z4+Pit2PI3qOMAk93t+Pxywuy53vRVtefy8vLh4eGRz/Da2trA3/Xl9fvCwsKqqqrR7Pmzs7Oa1PDG5ve9vb07ruWLy+4RpePQ0NDb29uNze5NtOeSkpKioqKEg4Onzd+Mwd6GttLO19vB0tqaxNp8uNtyrc65xcxpt95encGImqMlmdFCotGar7xziJJef5FSg58xj756goWemJSBj5dxuN9WkK9zdHBCfZxpaWdJdo41g6ldeomAeXNTbXuGqr4zmMp0entlaGl5ztT+AAAUxElEQVR4nO1dD3/btrUlAZjCqpEUJZOiJEsObZk0RcWynbZp+9Kle02WbmmXpWvf9/8o79wLUKIcp3X663teapw2tkiCACwc3f+gPM/BwcHBwcHBwcHBwcHhj4Le4eF9T8Hho8JRHzi671k4fDQgwhz0+3NHGoe7QDNh5k+eHD9+7Ejj8Ks4NIT5NJIy/uxkTaRxRo3Duzg8Ojo4OOhbzD+NpfJ9JQxp5kQi4MiRx6HFUX9Ll/58/gUIE4MygIj/zaQh0EXHGQfGIRm788efP3365MkXX8bC0MVAxl999sWTp08/Pz4m6jjOOBCgdP6UCSkDKaUQ/g0IXCGowX+tH/fve64O/wmAWpo3IrpJFYPd6Ug+P18fOw/KgdXSM3k7YW7Im6/PTo6danI46B88De7CGBWpv5yt5737nrDDPQNCZp6pXycMk+b5q/O1U00PHIcQMl++Y/K+VzX94xSqSd/3pB3uEZAx/afjcXBnfAfV5MyZBwxOWP/5Q/DN1fl67nTTQwWJmDnnAu6OPz/7y/n6sQsDP0hwxvoDCUOZpidfna+P5wf3PX2H/3eQiDn45LegevbXk7XLHTw4QMQcfP5MSsH/3xVCCPxT8msSNB+7RaMBz3NhpjuCQr5P4zs71+842/FfT44/djlDsQJmjcNdcNg/mP9WvnDiKTo7+fjzTT0QxkmZO+IIQuaDZUw3c0m5g/7H/nbrYeo5KXNHwJR5eqdU5PtIo/776uQj10wQMVmghvc9jY8FoMwTqQT/B4htWZVqT3Vgr1DhjGhbqm9fnX/slPFWgZze9yw+GoAyX8SDDhrBQkc1g3cw4wsyC8s0LUeDSDJpvr08e3x3yrxP/P8O1qf+xQF+aSJ5GA5vm4HTVbcBlPk07J5IirIBF9TklsaN7wd1ldijfFoHAlLm8mxXO5MMGQXebU2LkFSr1UWV8HIUw2Hergt+DcvVKi1265KbW3O6TWt7RCBDSetie1y0rxPjH+d0itrwCxq4SFejRWVdIYy77NChWvCw5jaepF6Wq8XUjIueje+U82QdZ24BKPPlljI9u4ClUjK8pXGj5MXep7HKlP9iRxm8+zax2Sx47UpFGizwS3r3Z+NxyjcTB5Z1gEuBDO3CaG9hblV1SmembYZUBgXdosNtyjTzNua1v6loNul4bPhdjschOsonrDeDuOSZJioYp+3fN20Cjj/NCrotpClXDc1EikmC5psAfdH8Lsbj1e/8Vv9RcNCf7yhj6IAfy0DcShm56khrdpNC8eL6bL2VMkMZ+WzpEOV0KBUtkPDlBLeFwhoM6GFKcUC0UqIpbIel9JWJEdY5KCNj34YNC748EpHiw6BGTzQIbpYhiJlKMeIm/ELnmTDWlhpPzVlf1HbCZcAhSIzd0BRoVqVgYKZZ7nkz5ZtJlkIufqe3+I8GUObvhh3WFDC/psGke2jRZPR537XUOmnU99enHcoEqpk+ejQRUVB5IyxqmXvFSKhg5XUoo5eBErOhl0xjJWI7RinFrHo0nWC9s4QWtK4eMRK+PhJiZI4rbybE6tGjdIaln1imEMyLWqh4mnjDkMQEOUMw4mXFQm8a4AYMm8ZxAVKCMl419gUMmTyNFBELlFGCfCcwyVHmVvT6/fnAUCbJAa+lTh16xg7ooIhTOqeT1FgheD0R/ktQ5qgNzIAyNbsg+AgX4MWUuytlJIodZXreBowx9g1kSWluxSKN6Nah74sVUWZm+zQTGomgbGcNykxZJQU+mLlPmSmE1ZBNqYpVXiVUBlbwmcYnMaTJMNKGMjpTcmQEq1LBlCnjN4l2lHkvKCwTGMpMxsYIMRem5uRsr+hKkLWqk5hUSjCoSBhFfvS3TmCGKEPGLhYqXNCqa15yLMyiI2WG0BW5sY/LQGXGnobSGLFUS2F9E2X2VSOkjLFINFFGTlnYhTTEPmVIAuFSzySOYEEpuQRVSP0tAz8m00kzwZkyFcZKNEtOsLzG3RRDCJ2UeT/6/YPQWrojYXxoK3PMZzzsRoZVnNA64bNNkTwhZ0u8iPw3r86Pd5TxM3r/QZcQi2UWuedd0DJsKUOksNaFLmB4GGvGSBkyXyF5hlOhmpAwK1opI2o+MUmYMnxyKf2Y1r5DmRgU2f55GuzEUAvTAsN2aMiUWYjtqSX+VKJMiT+tdJR5HzhdILqU8VVAqhwqh0/epAx9fJdjZQLAIuAgsPjudJsyIMpAhS3gjU8hWiq2kTUt1qBDmUW7dhBZuH/IOspSBmzFjcspBiZDVQTDljL0+cdx06FMEfgq2aMM9Vd0/sKJAG/zSEUJyZFu6IApMyKZZFBgxDyEJZMGkVjCsnKUuQWwZPoztU8ZXz7iw5YyndivinJevpQ0k49lUMwc9XInZqCYlGCndeMNYBy03tAtUsa41jna520bI2WSxg+GRJm4iYGWMlKZ47pDGWi4aF/KJJAyu9C/hsSK86SHoWEIdUSKZymzEmzmsA0l/DjBu7EEzVS2Us5jug0sZKIblIFB2ZEyUbxFZEQ+vcHVKoOPy2qJpM9328zkEIIHfrDwVz0Pvg/syx4Jmo0QF4YyvP4VhkqMqTGVqrG2DFOmxwargC3TLq9upYxVc2SfMGVwHnJjY7xltoukXMFhgloxsZ4eKUjlB2PMB16Y5rG2OWumzFRGjTadQq6QLQPKwMmij46jzLugeryB8m9QRpklYltGJzuQfTLa3ZynA9kmpHZihhTTdJpyvLcKlL/0jNcC7dOhTNLYrnSSbTVDaYVFAgdnQpSZ2Y//1pYxHpM2lCFWQDCAR8sgIguaLd2SlB44yFdpIJ/DP6A3/OwEqq00EePWY8qhiEseI4/pbkOZAm6T7xTTLTg6OHgio62UYdNBChIynl4a87cbl1lIP1h27y8g1nfWDJ+CYspMvRLESw1KUW9TiK4Ruzelcdp1OoZvC31UwNtWNgFRkl8+HJaNUnFOlNns8gIeU+aisNmImelphZE3mKAPAqJRSpa0l8Swk4ktpSQhouqSMGKfvZRw6dFyuFFLG5cpA4iThKLRQrGVRJSBPHKUuQ1UkPd3iBZLmZLdkTI3qmf0bvR3IcEPokDP+MfAMDOi6R9Xdo82jIual5iuFw2kS1Pjp4Tn7YUQaAwQb4SVimsoEaUMRTl4Y6+TbIIto1TbmjAS5lCJiHriAxVAvPTgwkWyqTOoIAreVbjPr+tYqHEKccTdg0jwwrQOeVgKD/s2LkMRamFORUPPUAaTwfxAGZdiugHSS1/KLWV2oNUWrUuzO02UiWTIxqW2HhKsTZjB4sXlOUWAoQzG0pomXq/n5WHAiy5HFMENA5sBGC/hQwnjD2XLdpzF2D6LZERG9nQst615SpPtCbjC3FMQxKWJDC94GCkprtPTwwz2t0L/5TIIGjv51XhMIbuVNDSEHErHwYTCNwsqYkbzmlKamyCoOFW5CcYrR5l30O/Pn6otZejdJouRXnqZCc/csGXIQRIiW1hdQW9pRaUS0etLzjNpnadpW3jCJuhwtak3ZcHZhSptQWG8PA3relQZI9ijlTbXqsSklNNOa8Lu7rR9vbTU1V5xgWFWJuiL/6aTug4hL5fchoGJpQnFfRebul5ROhMjVDSuzssZn6Ke0DPFgfgP2VPCDoyj/vz4mdhRRrfSo6jbYM2+x2Q8JIqNhGYhNQXhffX920tTZrX3sdTb4gFOR+nulW1L+1L3ep0ze9JNWxZ3bu/c2+ucoG0CepsDuzEZHsTbG8RObNuiLbhpaaw/9vrU/wP0+49Pth7T9s3LyTNtKSP2avIi35biKeiPpG3x/Ifrq5ODj7syz+FugJhZfyUtO4ZVVS2r6WpGLumOMvs1vyKTbTknnCC2k4X6Hnrp+Mh9JB8EoJlOtk52wA/Jo2fkRdF7KAMDcyFsukBtzG2ChYzbnP1AwGIm2A/lWXHSZrI7WyQDuSFTM6SEgBK21G0j/rkVMro1DuxPE4rrWCZ636TZ/t5Ga3VruehuU2vkdm7U+5bK3nF7J9nzelcHxGFfbc/3dKf1djI3+3S4BSRmxC9Qppp2EXKQFd7HZLMZLZkKebwnZLS3XIXhAr5LHoYc1tWjMEyGM05C4zyVZluknn1RkqsThiNe36LEqzRnF8vcNZkaV1onpvmqSohSs7YfDgq3jYHCTmJpIkhD0yEzIElHNBwXF7d3FyZ1mkxCm7Mc2WGWjjS34RBi5ptfoMw+kj1nhz/8qXwDIfPYWjI9E0OWYpYXUpoAci2jfDk21ZJy4RU2QifGK8838WZOGjcyo5TkyAT4G8oTTQMTvAsak1zPbahP1pSHEBaBST3Yxuh3SKkNwQW+6HAiTCFwSjG/2JT5juBu57YvYcLdXjVWQWUnbC+NHGVuA8TMV3emzKjYr+yETIDx+/bqfCtkpmNfZY0UwTBXylJGxPkyUHGWNVj9Klc+XgJgRaz8zJxeeo2gTAOWSzZZbCo/pzKipvDPMu48j/0Ix6QVsbiKD3C7yVFRztEcD6sAd2SYRKWTWvqiySLcU3gLiv1idkpmCWWXqPNYCBN73KDXDf9NtTCz8tsqc4c97MrF70CZkDODLWlgDxSNUi+okLOlzIQi9MmyXhGZLGUUUUZcQEgtlAhzZcsN0NrnSqtkRUlKpsxKUt2uzhfSRz9TyeMVmalnAGW4fTGTPpbZrPB2Pmic2qMVFfAlyw1cugvpx9Bj+QqkrKQflDkVHJMZn7PZr5Ms8qm+ZgjHUaghxWJowh7nvDa/85v9xwAo85lhx2qfMrftYwqFjMtdAVNSknv17a72l2qBhS3WvEmZFZeAijrfxYE8HHJ2IlAhUUZjGalEr2crah5JWZL2W5lMEShD7TWnrFNPGJdNbyljiiO0NpRhoENVGJtLQ45Ik7TG1FQBKcM7WDLBhaQjCJuGk048YapwjkWbbXDoAj7TF82IUO89wDXKRu8iU1RLMBil1XJZpSF/jQoos9v6pmERiHpFQf9CiZYyfr6UJGW8oQBllDKKKWyljKmzJClTBW2RDJVHJI8MC/LaVgoyZQhVgMUFW7kfW1XeKqaGqiHsJKhhaMPLXkIlVEavUhlGHrGCjFVMhlEew8waYUxNmpRV1dRy0uEGiDK0I0iI/Uf+tlnlLux2f2W/zEAornz4V2e3pPbShpxxv8RHWXSljArTtKTtBDl/GQIM0g2kjIrrmjLdMFkbGCzprnpyoAJQRjW47gvDrFYxsVjaeCpSPI+6lTI+73Map9qbNjIIpFpQhxetD10QBQx/FkKmoIzixypltJdyIeMEljl4QzUbPkbNBO04cHgXoMyTWx4WoqJbvsrg9m832KMMb6mtAzUu861iEvCY7LY22J2Fr5rJZAIn2NMxe0+KC59IykyDrT7MhARloKhERNvjuPOWMpqEB8zfhroJbYUWpMyADkPSYWYSwaqStNHJ7NBNRFv/542UICnTwK8OlQ8rWTeCitNjbgHKUAUGl1I4vAtQ5qk0ZIh+lR3vo0xnGz/HP4ZwmxJlqibBhZi2g5AIIOemUB1bRsWzga0PJSlTQKDw3miujYIto7LZAJ95Y65YW8bjfZfl+8xfMnY4ZTqM/RiD+Wbbd05UEGYfFpw22DI26o0xZyyiaMdkRAWi0KSDWewL5y/dDqbMBxBkH/SVcD9fnu0eFlIIKrbzyHKsFWsZOEEzD7bMKC9yqmvYUQbNSGqUAW93IspQ4V5GZsvUj2DGGIu2Vq1FbSmTrLDAuXfD1GjNX5qEz5PIwFV4QRlt1k/VlPZKKqpfL2AbhXCyTX3HkKi3Ab8pWa9UTU42lFQFuiYuLnMbjvr94+w3PJNoi5dvr3bPl4GXoWQ9i2nj6zTwZTZr4NkOtXGyWQIUWJ0ZYVOSx4Rl2RjFRJTJGyWCetZAqUyYBXBxhtBcptIiJ6k0g7vkE4lgzXI/M1OQTHLJ9FtlUIHohIypvJGKOpRkQYf42cwoUtdQXManeWww4dVQ2tpw+GZL6zGNuGjvHlbkPx6HVADxjSn7/TBwyaX/5vX16S4nqauYNspjZbDIFwGb1bQvdhnQAwBMLY5qCzQnXsQOLlRDUJi4jFdsAht55d0HvKd2ERgVRJRR/BzQmPYXCFvZGRhhs4v+TpdUloc+YALpog74TxMplWfyQwVwR06hZBuFlk0CLg25QgbcCb1axtCO8NlsNNhhH7Qpe33y9E+/BZ9Uz3784fpq950plPubjgaDsOTSuuVqMKBaOaoRztoN1cX2CUcXXj1gFzjN8HuDf4QK989WBRGsyrKUTZdBxhsKEnNfmPKmzbrtZ2I2umT2MKONv9RJmVDhljavzRNvitVsMBhVbNzY+8NS59lgYsPa4aDOw8GADCrqMLnlHXM47M8fr8/OP/jh4vR48Rc/vL6+OlvvCh/0Lnvd5obbErddk71XJmNtn7xrXpvT5iZt09z7TwfS+mY/exqkt23Gxal8sbfrky/0Onlyk3Xf1eRpr73RKaZbcXgAzpyfrj+UMZ98DRFzeXoOxuyqq2hVerv6B/ObdyS05QZ79Zxtc63NQ0jsb/vkZr3jht6yqW3UKZ3Y79V2wF20nem2vlO3RaWd+fT2Ovd6u8pRR5n34QicOTk9+7CvMUi/ZxFzMj86dPV4Dw+9g/nx+vzqp7t/G5MI3vzw8+UViRhXjvcwQXUzJ6cfEJ95DsacOhHzoEH1ef++e4Dmx9eXp+v+kRMxDxnEmW/u+HWk/htTvelEzIMG6abzO36dwXP4SmdzJ2MeOo76j9e/pJo6EuifpJYcYxxYNYkdNW5Yw7t6iDdu55IDg1XT1z89f/48iogfNwwbRWefP3/58sXr66vzudse6cCFwOvzq1fXb9++ff3zv17u8+XNjz+8fsu4vrw6O3ZqycGjHCXFgc9OrwivLv/2cqej3vzP6+vry0u+cnp2vna79h0YUE3z4/X6BDg/Pzt99d1L40IRYS6JKud06WR9fOD8aweLw6ODPngzfwzmrM/PXn33UxS9ZMJAtKyPcWXe7zvCONxAr3d4eAif+5hIc3lNxsvp+Xp+dMhwdHF4H6Cmjsm0OSXjhQhz3xNy+M/HIUkamDZrl390uCvIIJ4fHDoJ43B3OOvFwcHBwcHBwcHht+J/AcHj2LHJnxZ7AAAAAElFTkSuQmCC">
         <a id="title" href="index.html"><h1>Horarios.PES ⌚</h1></a>
     </header>
+    <div id="tabla" class="table-responsive">
+      <table class="table-bordered">
+        <tr>
+          <th>Horas</th>
+          <th>Lunes</th>
+          <th>Martes</th>
+          <th>Miercoles</th>
+          <th>Jueves</th>
+          <th>Viernes</th>
+          <th>Sábado</th>
+        </tr> 
+        <tr>
+          <td>09:00</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Laboratorio de Computación III 💻</td>
+        </tr>
+        <tr>
+          <td>10:00</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Laboratorio de Computación III 💻</td>
+        </tr>
+        <tr>
+          <td>Cambio de Horario</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>17:30</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Organización Empresarial 👩‍💼</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>18:00</td>
+          <td>Programación 🐱‍💻</td>
+          <td>Org. Contable de la Empresa 🗃🏭</td>
+          <td>Elementos de Investigación operativa 📈</td>
+          <td>Organización Empresarial 👩‍💼</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>19:00</td>
+          <td>Programación 🐱‍💻</td>
+          <td>Org. Contable de la Empresa 🗃🏭</td>
+          <td>Elementos de Investigación operativa 📈</td>
+          <td>Organización Empresarial 👩‍💼</td>
+          <td></td>
+          <td></td>
+          
+        </tr>
+        <tr>
+          <td>20:00</td>
+          <td>Programación 🐱‍💻</td>
+          <td>Org. Contable de la Empresa 🗃🏭</td>
+          <td>Elementos de Investigación operativa 📈</td>
+          <td>Organización Empresarial 👩‍💼</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>21:00</td>
+          <td>Programación 🐱‍💻</td>
+          <td>Org. Contable de la Empresa 🗃🏭</td>
+          <td>Elementos de Investigación operativa 📈</td>
+          <td>Organización Empresarial 👩‍💼</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>22:00</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table> 
+    </div>
 
-    <div><a href="">CBC</a></div>
-    <div><a href="utn.html">UTN</a></div>
-    <div><a href="">UNSAM </a></div>
-    <div><a href="">UBA</a></div>
-    <div><a href="">UNTREF</a></div>
-    <div><a href="">Cursos</a></div>
+      
+  
     <footer> 
        <p>Copyright © 2022 |Estudiantes-TUP-UTNFRD</p> 
     </footer>
